@@ -37,7 +37,41 @@ $testcolor-five: rgba(157, 0, 255, 0.4);
 }
 /*END FONT-FACE*/
 
+* {
+	box-sizing: border-box;
+}
 
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+.topic-wrapper {
+	height: 40px;
+	width: 100%;
+	border: 1px solid red;
+	margin-top: 30px;
+
+	span.topic {
+		line-height: 40px;
+		width: auto;
+		text-transform: uppercase;
+		position: relative;
+		font-family: opensanslight;
+		font-size: 12px;
+
+		&:after {
+			width: 10000%;
+			height: 1px;
+			background: #000;
+			position: absolute;
+			top: 50%;
+			content: '';
+			display: block;
+			left: 140%;
+		}
+	}
+}
 
 
 
@@ -79,6 +113,117 @@ $testcolor-five: rgba(157, 0, 255, 0.4);
 		width: 1140px;
 		height: 590px;
 		margin: 80px auto 0 auto;
+		overflow-x: hidden;
+
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+			height: 0;
+		}
+
+		.left-side {
+			width: 200px;
+			height: 100%;
+			float: left;
+			-webkit-box-shadow: 14px 0px 22px -12px rgba(0,0,0,0.75);
+			-moz-box-shadow: 14px 0px 22px -12px rgba(0,0,0,0.75);
+			box-shadow: 14px 0px 22px -12px rgba(0,0,0,0.75);
+
+			.boss-logo-wrapper {
+				background: rgba(255, 255, 255, 0.7);
+				width: 100%;
+				height: 100px;
+				position: relative;
+
+				.boss-logo {
+					position: absolute;
+					width: 80%;
+					top: 50%;
+					left: 50%;
+					-webkit-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
+
+					&:after {
+						display: block;
+						clear: both;
+						content: '';
+						height: 0;
+					}
+					
+					img {
+						float: left;
+					}
+
+					p {
+						font-family: opensanslight;
+						font-size: 11px;
+						font-weight: bold;
+						color: #000;
+						float: right;
+						margin-top: 20px;
+					}
+				}
+			}
+
+			ul.side-menu {
+
+				li {
+					background: rgba(255, 255, 255, 0.7);
+					height: 40px;
+					border-top: 1px solid #b3b5b5;
+
+					&:last-child {
+						border-bottom: 1px solid #b3b5b5;
+					}
+
+					a {
+						display: block;
+						width: 100%;
+						height: 100%;
+						text-align: left;
+						line-height: 40px;
+						text-transform: uppercase;
+						font-size: 10px;
+						font-family: opensanslight;
+						padding-left: 20%;
+					}
+
+					&:hover {
+						background: transparent;
+						border: none;
+					}
+				}
+			}
+
+			.bottom-block {
+				background: rgba(255, 255, 255, 0.7);
+				height: 290px;
+				width: 100%;
+				position: relative;
+
+				img {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					-webkit-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+
+		.right-side {
+			width: 940px;
+			height: 100%;
+			border: 1px solid red;
+			float: right;
+			padding-left: 9px;
+
+			.slider {
+				border: 1px solid blue;
+				height: 230px;
+			}
+		}
 	}
 	/*- - - - end main-section - - - -*/
 }
