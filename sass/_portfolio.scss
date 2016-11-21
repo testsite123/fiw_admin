@@ -1,0 +1,112 @@
+/*PROJECTS*/
+.projects {
+	margin-top: 30px;
+	border: 1px solid blue;
+
+	.projects-wrapper {
+		background: rgba(255, 255, 255, .4);
+		width: 100%;
+		height: 245px;
+
+		.project-inner {
+			padding: 15px;
+			overflow-y: scroll;	
+			overflow-x: hidden;
+
+			.project-block-wrapper {
+				width: 159px;
+				height: 98px;
+				display: inline-block;
+				margin: 0 13px 13px 0;
+				vertical-align: middle;
+
+				&:nth-child(5), &:nth-child(10), &:nth-child(15), &:nth-child(20), &:nth-child(25), &:nth-child(30), &:nth-child(35), &:nth-child(40), &:nth-child(45), &:last-child {
+					margin-right: 0;
+				} 
+
+				.project-block {
+					width: 100%;
+					height: 100%;
+					position: relative;
+
+					img {
+						width: 100%;
+						height: 100%;
+					}
+
+					&:hover {
+						.project-block-hover {
+							opacity: 1;
+						}						
+					}
+
+					.project-block-hover {
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						border: 1px solid #fff;
+						background: rgba(0, 0, 0, .5);
+						opacity: 0;
+						-webkit-transition: opacity ease-in-out .4s;
+						transition: opacity ease-in-out .4s;
+						z-index: 200;
+
+						.project-block-icon {
+							position: absolute;
+							top: 0;
+							right: 0;
+							width: 27px;
+							height: 27px;
+							background: url('../image/icons/pen2.png') no-repeat center;
+						}
+					}
+				}
+			}
+
+			.add-project-block {
+				border: 1px solid #7c7c7c;
+				background: url('../image/icons/plus.png') no-repeat center;
+			}
+		} 
+	}
+}
+/*END PROJECTS*/
+
+/*PROJECT-DESCRIPTION*/
+.project-about {
+	width: 100%;
+	height: 245px;
+	border: 1px solid blue;
+	margin-top: 15px;
+
+	.project-description-wrapper {
+		width: 100%;
+		height: 203px;
+		background: rgba(255, 255, 255, .4);
+		padding: 3px;
+
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+			height: 0;
+		}
+
+		.project-description {
+			width: 39%;
+			height: 197px;
+			border: 1px solid red;
+			float: left;
+		}
+
+		.slider-mini-photoes {
+			width: 61%;
+			height: 197px;
+			border: 1px solid blue;
+			float: right;
+		}
+	}
+	
+}
+/*END PROJECT-DESCRIPTION*/
